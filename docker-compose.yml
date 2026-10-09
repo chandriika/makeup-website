@@ -1,5 +1,5 @@
 services:
-  nginx:
+  makeup:
     image: nginx:latest
     container_name: makeup-website
     ports:
