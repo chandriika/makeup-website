@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy Nginx') {
             steps {
                 sh '''
-                    docker compose pull nginx
+                    
                     docker compose up -d
                 '''
             }
