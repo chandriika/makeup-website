@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blush & Bloom | Cute Makeup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="announcement">✿ a little sparkle, a lot of love ✿ free shipping on orders over ₹999</div>
+  <header class="header">
+    <a class="logo" href="#home">blush<span>&</span>bloom <span class="flower">✿</span></a>
+    <nav><a href="#home">home</a><a href="#shop">shop</a><a href="#about">our story</a></nav>
+    <a href="#shop" class="bag">shop the drop ♡</a>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy"><span class="eyebrow">✧ YOUR DAILY DOSE OF PRETTY ✧</span><h1>Pretty little<br><em>things</em> for you<span class="period">.</span></h1><p>Dreamy shades, glossy lips & a sprinkle of magic. Your cutest makeup era starts here.</p><a href="#shop" class="button">explore the collection ↗</a><div class="hero-note">♡ made for your main character moments</div></div>
+      <div class="hero-art"><div class="blob"></div><img src="images/hero.svg" alt="Illustrated makeup collection with lip gloss, blush, and flowers"><span class="hero-sticker">100%<br>cutie<br>approved ✿</span><span class="sparkle s1">✦</span><span class="sparkle s2">✳</span></div>
+    </section>
+    <section class="marquee">✿ SOFT GLAM EVERY DAY &nbsp; ♡ &nbsp; YOUR GLOW, YOUR RULES &nbsp; ✿ &nbsp; CUTE LOOKS ONLY &nbsp; ♡ &nbsp; SOFT GLAM EVERY DAY</section>
+    <section class="shop section" id="shop"><div class="section-heading"><div><span class="eyebrow">THE CUTEST EDIT</span><h2>your new <em>obsessions</em> ♡</h2></div><p>Little luxuries that make getting ready the best part of your day.</p></div>
+      <div class="products">
+        <article class="product"><div class="product-art pink"><span class="tag">BEST SELLER</span><img src="images/lipgloss.svg" alt="Pink cherry lip gloss"></div><div class="product-info"><div><h3>Cherry Kiss Gloss</h3><p>shiny, juicy & oh-so-sweet</p></div><strong>₹399</strong></div><button onclick="addToBag('Cherry Kiss Gloss')">add to bag +</button></article>
+        <article class="product"><div class="product-art peach"><span class="tag">NEW ✿</span><img src="images/blush.svg" alt="Peachy pink blush compact"></div><div class="product-info"><div><h3>Cloud Nine Blush</h3><p>your softest rosy glow</p></div><strong>₹549</strong></div><button onclick="addToBag('Cloud Nine Blush')">add to bag +</button></article>
+        <article class="product"><div class="product-art lilac"><span class="tag">SO CUTE</span><img src="images/eyeshadow.svg" alt="Pastel eyeshadow palette"></div><div class="product-info"><div><h3>Daydream Palette</h3><p>pastels made for dreaming</p></div><strong>₹799</strong></div><button onclick="addToBag('Daydream Palette')">add to bag +</button></article>
+        <article class="product"><div class="product-art cream"><span class="tag">GLOW UP</span><img src="images/highlighter.svg" alt="Pink highlighter stick"></div><div class="product-info"><div><h3>Star Girl Glow</h3><p>glow like you mean it</p></div><strong>₹499</strong></div><button onclick="addToBag('Star Girl Glow')">add to bag +</button></article>
+      </div>
+    </section>
+    <section class="feature" id="about"><div class="feature-visual"><span class="heart">♡</span><img src="images/feature.svg" alt="Illustrated lipstick and decorative daisies"></div><div class="feature-copy"><span class="eyebrow">A LITTLE LOVE NOTE</span><h2>makeup should<br>feel like <em>magic.</em></h2><p>We believe in playful colors, tiny happy rituals, and feeling pretty just for you. No rules, just a whole lot of pink.</p><a href="#shop" class="button secondary">find your fave ↗</a></div></section>
+    <section class="newsletter"><span>✿</span><h2>love letters & lip gloss</h2><p>Sign up for cute updates, new drops and a little extra sparkle.</p><form onsubmit="event.preventDefault();document.getElementById('newsletter-msg').textContent='Yay! You’re on the list ♡';this.reset();"><input type="email" placeholder="your email address" required aria-label="Email address"><button type="submit">count me in ♡</button></form><p id="newsletter-msg" aria-live="polite"></p></section>
+  </main>
+  <footer><div class="logo">blush<span>&</span>bloom ✿</div><p>stay soft, stay sparkly, stay you ♡</p><div>instagram ♡ &nbsp; pinterest ✿ &nbsp; tiktok ✧</div><small>© 2026 Blush & Bloom. Demo storefront.</small></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script>function addToBag(name){const t=document.getElementById('toast');t.textContent=name+' added to your wishlist ♡ (demo)';t.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.classList.remove('show'),2800)}</script>
+</body>
+</html>
