@@ -32,7 +32,7 @@ pipeline {
             steps {
                 sh '''
                     docker compose ps
-                    curl --fail http://localhost:8080/
+                    curl --fail http://localhost:2611/
                 '''
             }
         }
